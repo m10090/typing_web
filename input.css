@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  background-color: #ffffff;
+}
+.letter {
+  font-size: 2rem;
+  display: inline-block;
+  position: relative;
+  padding: 0rem;
+  border: 0.1rem solid #000000;
+  flex-wrap: nowrap;
+  box-sizing: content-box;
+  border: 0.1em  ;
+  border-radius: 0.2px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 200ms linear;
+}
+.letter.correct {
+  color: #00ee20;
+  background-color: rgba(0, 238, 32, 0.2);
+}
+@keyframes blink {
+  0% {
+    border-color: #000000;
+  }
+  50% {
+    border-color: #ffffff;
+  }
+  100% {
+    border-color: #000000;
+  }
+}
+.letter.curser{
+  border-right: 0.2rem solid #000000;
+  animation: blink 1s;
+  animation: move;
+}
+.letter.incorrect {
+  color: #ee0000;
+  background-color: rgba(238, 0, 0, 0.2);
+  transform: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
