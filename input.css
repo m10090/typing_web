@@ -1,45 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: "Courier", "melon","consolas";
+  src: ("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+}
 * {
-  background-color: #ffffff;
+  background-color: rgb(84,84,84);
 }
 .letter {
-  font-size: 2rem;
-  display: inline-block;
+  font-size: 100%;
+  color: #ffffff;
+  display: inline;
   position: relative;
-  padding: 0rem;
-  border: 0.1rem solid #000000;
-  flex-wrap: nowrap;
-  box-sizing: content-box;
-  border: 0.1em  ;
-  border-radius: 0.2px;
+  border-radius: 0.3rem;
   background-color: rgba(0, 0, 0, 0);
-  transition: all 200ms linear;
+  transition: position 2s ease-in-out, color 0.2s ease-in-out,
+    background 2s transition;
 }
 .letter.correct {
-  color: #00ee20;
-  background-color: rgba(0, 238, 32, 0.2);
-}
-@keyframes blink {
-  0% {
-    border-color: #000000;
-  }
-  50% {
-    border-color: #ffffff;
-  }
-  100% {
-    border-color: #000000;
-  }
-}
-.letter.curser{
-  border-right: 0.2rem solid #000000;
-  animation: blink 1s;
-  animation: move;
+  color: #20ee20;
+  box-shadow: rgba(0, 238, 32,0.4);
+  transition:background-color 5s transition;
 }
 .letter.incorrect {
   color: #ee0000;
-  background-color: rgba(238, 0, 0, 0.2);
   transform: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
-
+#Typing {
+  border: 0.1rem solid;
+  border-color: #dfdfdf;
+  width: 80%;
+  font-size: 8vw;
+}
+#Typing::-webkit-scrollbar {
+  display: none;
+}
